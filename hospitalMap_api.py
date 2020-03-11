@@ -27,7 +27,7 @@ while isEmptyPois:
     print('current in page: ' + str(page))
     url = r'https://restapi.amap.com/v3/place/text?' + keywords + '&city=' + str(city) + '&citylimit=true' \
           + '&output=json&offset=20' + pagestr + \
-          '&key=52816011eb4c7a4f57d7fab0a5ea738e&extensions=all'
+          '&key=<User GaoDe map key>&extensions=all'
     session = requests.session()
     res = session.get(url)
     content = json.loads(res.text)
